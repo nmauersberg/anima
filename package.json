@@ -1,6 +1,6 @@
 {
   "name": "anima-react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "author": "nmauersberg",
   "keywords": [
@@ -24,7 +24,6 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "build": "rm -rf dist && rm -rf js-lib && tsc && NODE_ENV=production babel js-lib/lib --out-dir dist --copy-files",
-    "publish": "yarn build && npm publish",
     "build:webpack": "webpack --mode=production",
     "serve:webpack": "npx serve public"
   },
