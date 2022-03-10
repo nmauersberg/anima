@@ -1,6 +1,7 @@
 {
   "name": "anima-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "main": "dist/index.js",
   "author": "nmauersberg",
   "keywords": [
     "react",
@@ -13,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nmauersberg/anima.git"
+    "url": "git+https://github.com/nmauersberg/anima-react.git"
   },
   "babelMacros": {
     "twin": {
@@ -22,7 +23,8 @@
   },
   "scripts": {
     "start": "webpack serve --mode=development",
-    "build": "rm -rf dist && tsc && NODE_ENV=production babel js-lib/lib --out-dir dist --copy-files",
+    "build": "rm -rf dist && rm -rf js-lib && tsc && NODE_ENV=production babel js-lib/lib --out-dir dist --copy-files",
+    "publish": "yarn build && npm publish",
     "build:webpack": "webpack --mode=production",
     "serve:webpack": "npx serve public"
   },
