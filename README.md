@@ -1,9 +1,28 @@
-# anima-react
+#### Basic usage
 
-## A collection of React components for flexible animations
+```tsx
+import { FadeIn, getIncrementor } from 'anima-react';
 
-### Develop:
+// return an incremented number on every call
+const getDelay = getIncrementor(0, 0.15);
 
-`yarn install`
+// Wrap your component and add an optional delay
+<FadeIn orientation="up" delay={getDelay()}>
+  <YourReactComponent />
+</FadeIn>;
+```
 
-`yarn start`
+#### Components
+
+**FadeIn**
+| name        | type                       | default |
+|-------------|----------------------------|---------|
+| delay       | number                     | 0       |
+| orientation | `left` `right` `up` `down` | `left`  |
+
+#### Develop
+
+```
+yarn install
+yarn start
+```
