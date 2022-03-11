@@ -15,10 +15,20 @@ const getDelay = getIncrementor(0, 0.15);
 #### Components
 
 **FadeIn**
-| name        | type                       | default |
-|-------------|----------------------------|---------|
-| delay       | number                     | 0       |
-| orientation | `left` `right` `up` `down` | `left`  |
+| name        | type                              | default |
+|-------------|-----------------------------------|---------|
+| delay       | number                            | 0       |
+| orientation | `left` `right` `up` `down` `none` | `left`  |
+| distance    | number                            | 10      |
+| duration    | number                            | 0.2     |
+
+**ZoomIn**
+| name        | type                              | default |
+|-------------|-----------------------------------|---------|
+| delay       | number                            | 0       |
+| orientation | `left` `right` `up` `down` `none` | `none`  |
+| distance    | number                            | 100     |
+| duration    | number                            | 0.2     |
 
 #### Develop
 

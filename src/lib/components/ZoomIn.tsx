@@ -3,7 +3,7 @@ import React, { ReactElement, ReactFragment } from 'react';
 
 export type Orientation = 'left' | 'right' | 'up' | 'down' | 'none';
 
-type FadeInProps = {
+type ZoomInProps = {
   orientation?: Orientation;
   delay?: number;
   duration?: number;
@@ -11,19 +11,19 @@ type FadeInProps = {
   children: ReactElement;
 };
 
-export const FadeIn = ({
-  orientation = 'left',
+export const ZoomIn = ({
+  orientation = 'none',
   delay = 0,
   duration = 0.2,
-  distance = 10,
+  distance = 100,
   children,
-}: FadeInProps): ReactElement => {
+}: ZoomInProps): ReactElement => {
   return (
     <ClassNames>
       {({ css /*cx*/ }) => {
         const animation = css`
-          opacity: 0;
-          animation: ${fadeIn(orientation, distance)} ${duration}s ease-in-out
+          transform: scale(0);
+          animation: ${zoomIn(orientation, distance)} ${duration}s ease-in-out
             ${delay}s forwards;
         `;
         return <div className={animation}>{children}</div>;
@@ -32,15 +32,13 @@ export const FadeIn = ({
   );
 };
 
-const fadeIn = (orientation: Orientation, distance: number): string => {
+const zoomIn = (orientation: Orientation, distance: number): string => {
   return keyframes`
-    from {
-        opacity:0;
-        transform: ${getTransform(orientation, distance)};
+    0% {
+        transform: scale(0) ${getTransform(orientation, distance)};
     }
-    to {
-        opacity:1;
-        transform: translatex(0);
+    100% {
+        transform: scale(1) translatex(0);
     }
 `;
 };
