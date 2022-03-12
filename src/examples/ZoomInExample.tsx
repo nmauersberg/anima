@@ -16,11 +16,11 @@ const Box = styled.div(() => [
   `,
 ]);
 
-type FadiInExampleProps = {
+type FadeInExampleProps = {
   initDelay: number;
 };
 
-export const ZoomInExample = ({ initDelay }: FadiInExampleProps) => {
+export const ZoomInExample = ({ initDelay }: FadeInExampleProps) => {
   const getDelay = getIncrementor(initDelay, 0.25);
 
   return (

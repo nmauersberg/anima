@@ -1,0 +1,15 @@
+{
+  "version": "0.1",
+  "language": "en",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/pkg/**",
+    "**/dist/**",
+    "**/.git/**",
+    "yarn.lock",
+    "**/yarn-error.log",
+    "**/public/**",
+    "**/js-lib/**"
+  ],
+  "words": ["translatex", "translatey", "nmauersberg", "tailwindcss"]
+}

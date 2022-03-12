@@ -1,4 +1,18 @@
-#### Basic usage
+# anima-react
+
+### An animation wrapper component library for react
+
+### Installation
+
+```bash
+yarn add anima-react
+
+# OR:
+
+npm install anima-react
+```
+
+### Basic usage
 
 ```tsx
 import { FadeIn, getIncrementor } from 'anima-react';
@@ -12,27 +26,33 @@ const getDelay = getIncrementor(0, 0.15);
 </FadeIn>;
 ```
 
-#### Components
+---
 
-**FadeIn**
+### Components
+
+#### **FadeIn**
+
 | name        | type                              | default |
-|-------------|-----------------------------------|---------|
+| ----------- | --------------------------------- | ------- |
 | delay       | number                            | 0       |
 | orientation | `left` `right` `up` `down` `none` | `left`  |
 | distance    | number                            | 10      |
 | duration    | number                            | 0.2     |
 
-**ZoomIn**
+### **ZoomIn**
+
 | name        | type                              | default |
-|-------------|-----------------------------------|---------|
+| ----------- | --------------------------------- | ------- |
 | delay       | number                            | 0       |
 | orientation | `left` `right` `up` `down` `none` | `none`  |
 | distance    | number                            | 100     |
 | duration    | number                            | 0.2     |
 
-#### Develop
+---
+
+### Develop
 
 ```
 yarn install
-yarn start
+yarn dev
 ```
