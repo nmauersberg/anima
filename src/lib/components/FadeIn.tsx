@@ -1,5 +1,5 @@
 import { ClassNames, keyframes } from '@emotion/react';
-import React, { ReactElement, ReactFragment } from 'react';
+import React, { ReactElement } from 'react';
 
 export type Orientation = 'left' | 'right' | 'up' | 'down' | 'none';
 
