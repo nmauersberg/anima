@@ -30,10 +30,10 @@ const getDelay = getIncrementor(0, 0.15);
 
 ### Components
 
-#### **FadeIn**
+### **FadeIn**
 
 | name        | type                              | default |
-| ----------- | --------------------------------- | ------- |
+|-------------|-----------------------------------|---------|
 | delay       | number                            | 0       |
 | orientation | `left` `right` `up` `down` `none` | `left`  |
 | distance    | number                            | 10      |
@@ -42,7 +42,7 @@ const getDelay = getIncrementor(0, 0.15);
 ### **ZoomIn**
 
 | name        | type                              | default |
-| ----------- | --------------------------------- | ------- |
+|-------------|-----------------------------------|---------|
 | delay       | number                            | 0       |
 | orientation | `left` `right` `up` `down` `none` | `none`  |
 | distance    | number                            | 100     |
