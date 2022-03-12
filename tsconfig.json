@@ -12,7 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "esModuleInterop": true,
     "jsxImportSource": "@emotion/react",
     "declaration": true,
