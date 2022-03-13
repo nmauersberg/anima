@@ -26,8 +26,6 @@ const getDelay = getIncrementor(0, 0.15);
 </FadeIn>;
 ```
 
----
-
 ### Components
 
 ### **FadeIn**
@@ -48,7 +46,6 @@ const getDelay = getIncrementor(0, 0.15);
 | distance    | number                            | 100     |
 | duration    | number                            | 0.2     |
 
----
 
 ### Develop
 
