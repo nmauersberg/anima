@@ -8,7 +8,7 @@ type FadeInProps = {
   delay?: number;
   duration?: number;
   distance?: number;
-  children: ReactElement;
+  children: ReactElement | ReactElement[] | string;
 };
 
 export const FadeIn = ({
