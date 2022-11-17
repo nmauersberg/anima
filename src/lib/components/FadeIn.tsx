@@ -1,5 +1,6 @@
 import { ClassNames, keyframes } from '@emotion/react';
 import React, { ReactElement } from 'react';
+import { css } from 'twin.macro';
 
 export type Orientation = 'left' | 'right' | 'up' | 'down' | 'none';
 
@@ -17,20 +18,37 @@ export const FadeIn = ({
   duration = 0.2,
   distance = 10,
   children,
-}: FadeInProps): ReactElement => {
-  return (
-    <ClassNames>
-      {({ css /*cx*/ }) => {
-        const animation = css`
-          opacity: 0;
-          animation: ${fadeIn(orientation, distance)} ${duration}s ease-in-out
-            ${delay}s forwards;
-        `;
-        return <div className={animation}>{children}</div>;
-      }}
-    </ClassNames>
-  );
+}: FadeInProps): ReactElement => (
+  <ClassNames>
+    {({ css }) => (
+      <div
+        className={css`
+          ${mkFadeInCss({ orientation, delay, duration, distance })}
+        `}
+      >
+        {children}
+      </div>
+    )}
+  </ClassNames>
+);
+
+type MkFadeInCssArgs = {
+  orientation: Orientation;
+  delay: number;
+  duration: number;
+  distance: number;
 };
+
+export const mkFadeInCss = ({
+  orientation,
+  delay,
+  duration,
+  distance,
+}: MkFadeInCssArgs) => css`
+  opacity: 0;
+  animation: ${fadeIn(orientation, distance)} ${duration}s ease-in-out ${delay}s
+    forwards;
+`;
 
 const fadeIn = (orientation: Orientation, distance: number): string => {
   return keyframes`
